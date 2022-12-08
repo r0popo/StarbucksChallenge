@@ -11,7 +11,7 @@ Identifying customer groups that are most responsive to different offer types. U
 6. [References] (#references)
 
 ## Dependencies <a name="dependencies"></a>
-This project was developed in Python 3.10+.
+This project was developed in Python 3.10+.\
 Main packages used are:
 + [pandas](https://pandas.pydata.org/docs/)
 + [seaborn](https://seaborn.pydata.org/index.html) >=0.12
@@ -20,9 +20,9 @@ Main packages used are:
 + [scipy](https://docs.scipy.org/doc/scipy/) 
 
 A full list of requirements can be found in the 'requirements.txt' file which can be used to create conda virtual environment with:
-'''
+```
 conda create --name <env> --file requirements.txt
-'''
+```
 
 ## Project Motivation<a name="motivation"></a>
 
