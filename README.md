@@ -28,6 +28,14 @@ conda create --name <env> --file requirements.txt
 
 
 ## File Descriptions<a name="files"></a>
++ data.zip - original datasets provided for the purposes of StarbucksChallenge. The folder contains three .csv files and a .txt file with description of each datasets
++ functions.py - python script with all custom functions used throughout the project
++ 1-Clean.py - python script used for initial dataset exploration and data wrangling
++ 2-Analyse.py - python script used for data visualisation and analysis
++ dataset_cleaned.csv - csv file exported after running 1-Clean step
++ plots.zip - all plots generated during 2-Analyse step
++ KS_test.csv and KS_test_offercomp.csv - csv files generated during 2-Analyse step that contain results of the Kolmogorov–Smirnov test
+
 
 ## Results<a name="results"></a>
 The main findings of the code can be found at the post available [here](https://medium.com/@ropopo/).
