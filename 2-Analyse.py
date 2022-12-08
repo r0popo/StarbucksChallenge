@@ -60,12 +60,14 @@ profile_filtered = profile[profile['age']<115]
 gender = sns.countplot(profile_filtered, x='gender', palette='flare')
 gender.set(title = 'Distribution of Gender', xlabel ='Gender', ylabel = 'Count')
 sns.despine()
+plt.savefig('plots/gender_distribution.png', pad_inches= 0.15, dpi = 450)
 plt.show()
 
 age = sns.histplot(profile_filtered, x='age', binrange=(15,100),  binwidth=(5),\
                    color = (0.91262605, 0.52893336, 0.40749715), kde = True)
 age.set(title = 'Distribution of Age', xlabel ='Age')
 sns.despine()
+plt.savefig('plots/age_distribution.png', pad_inches= 0.15, dpi = 450)
 plt.show()
 
 income = sns.histplot(profile_filtered, x='income',\
@@ -73,6 +75,7 @@ income = sns.histplot(profile_filtered, x='income',\
                   color = (0.91262605, 0.52893336, 0.40749715), kde = True)
 income.set(title = 'Distribution of Income', xlabel ='Income ($)')
 sns.despine()
+plt.savefig('plots/income_distribution.png', pad_inches= 0.15, dpi = 450)
 plt.show()
 
 
@@ -81,6 +84,7 @@ mem = sns.histplot(profile_filtered, x='became_member_on', bins=date2num(mem_bin
                    color = (0.91262605, 0.52893336, 0.40749715), kde = True)
 mem.set(title = 'Distribution of Membership Start', xlabel ='Year')
 sns.despine()
+plt.savefig('plots/membership_distribution.png', pad_inches= 0.15, dpi = 450)
 plt.show()
 
 
@@ -88,6 +92,7 @@ age_dist = joyplot(profile_filtered, by='gender', column='age',\
                    colormap=sns.color_palette("flare", as_cmap=True))
 plt.xlabel('Age')
 plt.title("Age Distribution by Gender")
+plt.savefig('plots/age_distribution_bygender.png', pad_inches= 0.15, dpi = 450)
 plt.show()
 
 
@@ -97,6 +102,7 @@ plt.xlabel('Income ($)')
 plt.title("Income Distribution by Gender")
 ax = plt.gca()
 ax.xaxis.set_major_formatter(tkr.FuncFormatter(lambda x, p: '{:,.0f}'.format(x/1000) + 'K'))
+plt.savefig('plots/income_distribution_bygender.png', pad_inches= 0.15, dpi = 450)
 plt.show()
 
 
@@ -132,6 +138,8 @@ leg = age_count._legend
 #     t.set_text(t.get_text()[:4])
 # =============================================================================
 leg.set_title('Impact')
+plt.savefig('plots/impact_byage_count.png', pad_inches= 0.15, dpi = 450)
+
 
 age_perc = sns.FacetGrid(uod_filtered[uod_filtered['offer_type']!='informational'],\
                     col='gender', col_order=['F', 'M', 'O'], row='offer_type',\
@@ -143,7 +151,7 @@ age_perc = age_perc.map_dataframe(sns.histplot, stat ='percent',  x='age',\
                     palette='flare')
 age_perc.set(xlabel ='Age', ylabel = 'Percentage %')
 age_perc.fig.suptitle('Impact by Age')
-
+plt.savefig('plots/impact_byage_perc.png', pad_inches= 0.15, dpi = 450)
 
 
 #Plotting graphs for Misplaced Impact across different ages
@@ -163,6 +171,8 @@ sns.move_legend(age_count2, "upper left", bbox_to_anchor=(0.815, 0.935),\
                 title=None, frameon=False)
 leg = age_count2._legend
 leg.set_title('Misplaced Impact')
+plt.savefig('plots/misimpact_byage_count.png', pad_inches= 0.15, dpi = 450)
+
 
 age_perc2 = sns.FacetGrid(uod_filtered[uod_filtered['offer_type']!='informational'],\
                     col='gender',col_order=['F', 'M', 'O'], row='offer_type',\
@@ -174,6 +184,8 @@ age_perc2 = age_perc2.map_dataframe(sns.histplot, stat ='percent',  x='age',\
                     hue_order = impact_hue_order, palette='flare')
 age_perc2.set(xlabel ='Age', ylabel = 'Percentage %')
 age_perc2.fig.suptitle('Misplaced Impact by Age')
+plt.savefig('plots/misimpact_byage_perc.png', pad_inches= 0.15, dpi = 450)
+
 
 
 #Plotting graphs for Impact across different income groups
@@ -195,6 +207,7 @@ sns.move_legend(income_count, "upper left", bbox_to_anchor=(0.87, 0.935),\
                 title=None, frameon=False)
 leg = income_count._legend
 leg.set_title('Impact')
+plt.savefig('plots/impact_byincome_count.png', pad_inches= 0.15, dpi = 450)
 
 
 income_perc = sns.FacetGrid(uod_filtered[uod_filtered['offer_type']!='informational'],\
@@ -209,6 +222,7 @@ income_perc.set(xlabel ='Income ($)', ylabel = 'Percentage %')
 for ax in income_perc.axes.flat:
     ax.xaxis.set_major_formatter(tkr.FuncFormatter(lambda x, p: '{:,.0f}'.format(x/1000) + 'K'))
 income_perc.fig.suptitle('Impact by Income')
+plt.savefig('plots/impact_byincome_perc.png', pad_inches= 0.15, dpi = 450)
 
 
 #Plotting graphs for Impact across membership start
@@ -228,6 +242,8 @@ sns.move_legend(mem_count, "upper left", bbox_to_anchor=(0.87, 0.935),\
                 title=None, frameon=False)
 leg = mem_count._legend
 leg.set_title('Impact')
+plt.savefig('plots/impact_bymembership_count.png', pad_inches= 0.15, dpi = 450)
+
 
 mem_perc = sns.FacetGrid(uod_filtered[uod_filtered['offer_type']!='informational'],\
                     col='gender',row='offer_type', col_order=['F', 'M', 'O'],\
@@ -239,8 +255,7 @@ mem_perc = mem_perc.map_dataframe(sns.histplot, stat ='percent',  x='became_memb
                     palette='flare')
 mem_perc.set(xlabel ='Year', ylabel = 'Percentage %')
 mem_perc.fig.suptitle('Impact by Membership Start')
-
-
+plt.savefig('plots/impact_bymembership_perc.png', pad_inches= 0.15, dpi = 450)
 
 
 
@@ -256,6 +271,8 @@ sns.move_legend(age_ecdf, "upper left", bbox_to_anchor=(0.8, 0.925), title=None,
 #age_ecdf.add_legend()
 leg = age_ecdf._legend
 leg.set_title('Impact interval')
+plt.savefig('plots/cumulative_impact_byage.png', pad_inches= 0.15, dpi = 450)
+
 
 '''
 Calculating a KS test score for comparison of two distributions under the
@@ -442,7 +459,8 @@ KS_test.style.bar(subset=['statistics'], align='mid', color=['#fec20c', '#00ab41
     .format({'statistics': '{:,.2%}'.format,'pvalue': '{:,.2%}'.format})
 display(KS_test)    
     
-
+#Saving KS test results to a separate csv file
+KS_test.to_csv('KS_test.csv')
 
 
 #Comparing successfull offers amongs two different offer types
@@ -529,8 +547,6 @@ KS_test_offercomp.rename(columns={'index': 'test', }, inplace=True)
 KS_test_offercomp.sort_values('pvalue', inplace=True)
 
 display(KS_test_offercomp)
+KS_test_offercomp.to_csv('KS_test_offercomp.csv')
 
-
-
-uod_filtered['income'].describe()
-#sns.color_palette('flare', n_colors=5)
+print('\n All plots as well as the KS test results have been saved in separate files. Plots can be found in \'plots/\' folder as .png and KS results as .csv files.') 
