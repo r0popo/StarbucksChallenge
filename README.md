@@ -8,7 +8,7 @@ Identifying customer groups that are most responsive to different offer types. U
 3. [File Descriptions](#files)
 4. [Results](#results)
 5. [Licensing, Authors, and Acknowledgements](#licensing)
-6. [References] (#references)
+6. [References](#references)
 
 ## Dependencies <a name="dependencies"></a>
 This project was developed in Python 3.10+.\
@@ -41,10 +41,9 @@ This project is inspired and submitted for the purposes of Udacity's Data Scienc
 1. https://github.com/leotac/joypy
 2. https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test
 3. https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kstest.html
-4. https://seaborn.pydata.org/
-5. https://seaborn.pydata.org/generated/seaborn.FacetGrid.html
-6. [Visualization with Seaborn](https://jakevdp.github.io/PythonDataScienceHandbook/04.14-visualization-with-seaborn.html)
-7. [Seaborn Styling, Part 1: Figure Style and Scale](https://www.codecademy.com/article/seaborn-design-i)
-8. [A Gentle Introduction to Probability Density Estimation](https://machinelearningmastery.com/probability-density-estimation/)
-9. [How to Compare Two or More Distributions](https://towardsdatascience.com/how-to-compare-two-or-more-distributions-9b06ee4d30bf)
-10. [Customer Demographics & Segmentation Analysis with Simple Python](https://medium.com/analytics-vidhya/customer-demographics-segmentation-analysis-with-simple-python-cdd2e6d35f2e)
+4. https://seaborn.pydata.org/generated/seaborn.FacetGrid.html
+5. [Visualization with Seaborn](https://jakevdp.github.io/PythonDataScienceHandbook/04.14-visualization-with-seaborn.html)
+6. [Seaborn Styling, Part 1: Figure Style and Scale](https://www.codecademy.com/article/seaborn-design-i)
+7. [A Gentle Introduction to Probability Density Estimation](https://machinelearningmastery.com/probability-density-estimation/)
+8. [How to Compare Two or More Distributions](https://towardsdatascience.com/how-to-compare-two-or-more-distributions-9b06ee4d30bf)
+9. [Customer Demographics & Segmentation Analysis with Simple Python](https://medium.com/analytics-vidhya/customer-demographics-segmentation-analysis-with-simple-python-cdd2e6d35f2e)
