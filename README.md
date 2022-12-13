@@ -42,7 +42,7 @@ Starbucks' Challenge aims to understand customer responses to different offer ty
 ## Results<a name="results"></a>
 The observed qualities of demographic traits' distributions explored in this project combined with the ranking of impact factors that was achieved by applying the Kolmogorov-Smirnov test, led me to define different groups of Starbucks' customers from the simulated dataset and what offer is best for each of the groups.
 
-The main findings of the project can be found at the post available [here]([https://medium.com/@ropopo/](https://medium.com/@ropopo/a-good-coffee-offer-for-all-ages-2d9edf5e5b10).
+The main findings of the project can be found at the post available [here](https://medium.com/@ropopo/a-good-coffee-offer-for-all-ages-2d9edf5e5b10).
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 This project is inspired and submitted for the purposes of Udacity's Data Scientist Nanodegree. You can find additional information about the course [here](https://udacity.com/course/data-scientist-nanodegree--nd025).
