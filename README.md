@@ -25,6 +25,8 @@ conda create --name <env> --file requirements.txt
 ```
 
 ## Project Motivation<a name="motivation"></a>
+Customer loyalty programs rely on customers' inclination to continue buying products from a brand they are already familiar with and enthusiastic about. Loyalty programs can also drive market share but they need to be simple to access, relevant to industry trends, and appealing to today's digital consumer. Most crucially, they need to reach the right customers.
+Starbucks' Challenge aims to understand customer responses to different offer types and to use insights from data analysis in order to send a specific offer to the right customer.
 
 
 ## File Descriptions<a name="files"></a>
@@ -38,12 +40,15 @@ conda create --name <env> --file requirements.txt
 
 
 ## Results<a name="results"></a>
-The main findings of the code can be found at the post available [here](https://medium.com/@ropopo/).
+The observed qualities of demographic traits' distributions explored in this project combined with the ranking of impact factors that was achieved by applying the Kolmogorov-Smirnov test, led me to define different groups of Starbucks' customers from the simulated dataset and what offer is best for each of the groups.
+
+The main findings of the project can be found at the post available [here](https://medium.com/@ropopo/).
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
+This project is inspired and submitted for the purposes of Udacity's Data Scientist Nanodegree. You can find additional information about the course [here](https://udacity.com/course/data-scientist-nanodegree--nd025).
 
+All datasets were provided by Starbucks' and are intended to be used for the purposes of the Udacity Data Science Nanodegree program.
 
-This project is inspired and submitted for the purposes of Udacity's Data Science Nanodegree. You can find additional information about the course [here](https://udacity.com/course/data-scientist-nanodegree--nd025).
 
 ## References <a name="references"></a>
 1. https://github.com/leotac/joypy
